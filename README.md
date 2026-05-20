@@ -31,8 +31,16 @@ la vostra BD amb mongosh:
 ```js
 use cinematch_<NIU_lider>            // p.ex. cinematch_1703702
 db.embedded_movies.drop()            // per si ja existia
+
+// IMPORTANT: $merge (no $out). Atlas no permet $out cross-database
+// per als usuaris s_<NIU>; $merge sí está permès i té el mateix efecte.
 db.getSiblingDB("sample_mflix").embedded_movies.aggregate([
-  { $out: "cinematch_<NIU_lider>.embedded_movies" }
+  { $merge: {
+      into: { db: "cinematch_<NIU_lider>", coll: "embedded_movies" },
+      on: "_id",
+      whenMatched: "replace",
+      whenNotMatched: "insert"
+  } }
 ])
 db.embedded_movies.countDocuments()  // ha de donar ~3 500
 ```
@@ -49,7 +57,10 @@ db.embedded_movies.createSearchIndex(
       { type: "filter", path: "year" }
   ]}
 )
-db.embedded_movies.getSearchIndexes()   // esperar status: READY (~1 min)
+// El camp `queryable` triga 2-3 min en passar a true (no 1 min com sembla
+// inicialment — `createSearchIndex` retorna OK abans que mongot acabi).
+// Espereu fins veure queryable:true ABANS de córrer N1.
+db.embedded_movies.getSearchIndexes()
 ```
 
 (Alternativa: Atlas UI → la vostra BD → `embedded_movies` → Search Indexes → Create.)

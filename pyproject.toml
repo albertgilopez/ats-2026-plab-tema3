@@ -10,14 +10,14 @@ dependencies = [
 ]
 
 # N4 only (multi-agent orchestration with LangGraph + MongoDB memory).
-# Uncomment if you reach N4. Pattern documented in enunciat §0.5 / sessio_PLAB1.md.
-# [project.optional-dependencies]
-# n4 = [
-#   "langgraph>=0.2",
-#   "langchain-openai>=0.2",
-#   "langchain>=0.3",                          # for @tool decorator
-#   "langgraph-checkpoint-mongodb>=0.1",       # MongoDBSaver — persist agent memory in Mongo
-# ]
+# Pattern documented in enunciat §0.5.
+[project.optional-dependencies]
+n4 = [
+  "langgraph>=0.2",
+  "langchain-openai>=0.2",
+  "langchain>=0.3",
+  "langgraph-checkpoint-mongodb>=0.1",
+]
 
 [tool.uv]
 package = false
