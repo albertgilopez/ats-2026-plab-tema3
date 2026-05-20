@@ -125,8 +125,7 @@ cluster es considera no executat.
 publicarà un validador automàtic al canal `#plab1` per comprovar-ho abans del
 lliurament.
 
-N4 amb LangGraph: descomenta `[project.optional-dependencies]` al
-`pyproject.toml` i `uv sync --extra n4`.
+N4 amb LangGraph: `uv sync --extra n4` (ja és a `pyproject.toml`).
 
 ## 5. Lliurament
 
