@@ -122,7 +122,7 @@ cluster es considera no executat.
 ```
 
 **NO s'avaluaran lliuraments que NO segueixin aquesta estructura exacta.** Es
-publicarà un validador automàtic al canal `#plab1` per comprovar-ho abans del
+publicarà un validador automàtic al canal [#pràctiques-s1](https://discord.com/channels/1468871413371768926/1468871413988331657) per comprovar-ho abans del
 lliurament.
 
 N4 amb LangGraph: `uv sync --extra n4` (ja és a `pyproject.toml`).
