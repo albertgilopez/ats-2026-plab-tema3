@@ -1,8 +1,9 @@
 # CineMatch-RAG — PLAB starter (Tema 3 · ATS 2025-26)
 
 Mini-Agentic-RAG sobre `sample_mflix.embedded_movies` (Atlas Vector Search + OpenAI).
-Llegiu el repte complet a `enunciat_mini_agentic_rag.md`. Aquesta plantilla us dóna
-un **N1 funcional**; construïu N2 → N4 a sobre.
+Llegiu el repte complet a **[`enunciat_mini_agentic_rag.pdf`](enunciat_mini_agentic_rag.pdf)** i la
+rúbrica d'avaluació a **[`rubrica_niveles.md`](rubrica_niveles.md)**. Aquesta
+plantilla us dóna un **N1 funcional**; construïu N2 → N4 a sobre.
 
 > **Grup:** `_____` · **Membres:** `_____`
 > **Nivell màxim assolit:** `N_` (actualitzeu abans del lliurament)
@@ -138,9 +139,9 @@ N4 amb LangGraph: `uv sync --extra n4` (ja és a `pyproject.toml`).
 
 ## 6. Avaluació — 6 canals d'evidència
 
-Veure `rubrica_niveles.md` per al detall. Resum:
+Veure [`rubrica_niveles.md`](rubrica_niveles.md) per al detall. Resum:
 
-| Canal | % prov. | Eina |
+| Canal | % | Eina |
 |---|---|---|
 | A · Funcionalitat (N1→N4) | 45% | Tests automàtics |
 | B · Qualitat tècnica | 15% | Static analysis + validador estructura |
