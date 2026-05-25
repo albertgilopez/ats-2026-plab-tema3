@@ -162,7 +162,7 @@ Sobre el `system.profile` del vostre `cinematch_<NIU>` al cluster del curs.
 |---|---|
 | Clau OpenAI o `.env` committejada (qualsevol commit, qualsevol moment) | **−2 punts globals** + rotació immediata de la clau |
 | Estructura del repositori incorrecta (validador falla) | **NO s'avalua** (cal corregir abans del lliurament) |
-| `n_vector_searches == 0` al profile AND tests CI verds | **Bandera roja: revisió manual** (sospita de hardcoded outputs) |
+| `n_vector_searches == 0` al profile AND tests `/validate` verds | **Bandera roja: revisió manual** (sospita de hardcoded outputs) |
 | Cap altra IA que NO sigui PROFE detectada sense declarar | **−3 punts globals** + revisió de tota la pràctica |
 | Modificar `sample_mflix.embedded_movies` (col·lecció compartida) | **−1 punt** |
 | `IA_REPORT.md` clarament fals o absent | **Canal F = 0** |
